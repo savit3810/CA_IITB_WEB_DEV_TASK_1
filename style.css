@@ -1,0 +1,106 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: linear-gradient(135deg, #292E49, #536976);
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Hero Content */
+.hero-content {
+  z-index: 2;
+  animation: fadeIn 2s ease;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  animation: slideInDown 1.5s ease;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+  color: #e0e0e0;
+}
+
+.btn {
+  padding: 12px 25px;
+  background: #ffffff;
+  color: #292E49;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #f2f2f2;
+  transform: scale(1.05);
+}
+
+/* Decorative Circles */
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  animation: float 10s infinite ease-in-out;
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  top: -100px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 400px;
+  height: 400px;
+  bottom: -150px;
+  right: -150px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
